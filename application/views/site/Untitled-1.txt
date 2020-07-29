@@ -1,0 +1,28 @@
+<input name="chiffre1" id="" class="btn btn-primary" type="button" value="">
+<input name="chiffre2" id="" class="btn btn-primary" type="button" value="">
+<input name="chiffre3" id="" class="btn btn-primary" type="button" value="">
+<input name="chiffre4" id="" class="btn btn-primary" type="button" value="">
+
+<input name="chiffre1" id="" class="btn btn-primary" type="button" value="">
+<input name="operateur" id="" class="btn btn-primary" type="button" value="">
+<input name="chiffre2" id="" class="btn btn-primary" type="button" value="">
+
+
+
+table = idExercice1 -> formExercice1,formExercice2, formExercice3
+                        $chiffre1, $operateur, $chiffre2, $result
+
+$formulaires_exercice = [formExercice1,formExercice2, formExercice3];
+
+foreach($formulaires_exercice as $form_exerc) {
+   <input name="<?= $form_exerc['chiffre1'] ?>" id="" class="btn btn-primary" type="button" value="">
+   <input name="operateur" id="" class="btn btn-primary" type="button" value="">
+   <input name="chiffre2" id="" class="btn btn-primary" type="button" value="">
+}
+
+<form>
+   <input name="chiffre1" id="" class="btn btn-primary" type="button" value="">
+   <button onclick=getRandom() 
+   <input name="operateur" id="" class="btn btn-primary" type="button" value="">
+   <input name="chiffre2" id="" class="btn btn-primary" type="button" value="">
+</form>
