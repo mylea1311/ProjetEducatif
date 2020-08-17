@@ -1,62 +1,58 @@
 <div class="container h-100">
    <div class="row h-100 ">
-      <div class="col-lg-12">
-         <center>
-
-            <h1 class="display-4 text-white mt-5 mb-2"></h1>
-            <h2>Exercice</h2>
-
-            <div class="container">
+      <div class="col-lg-12" style="text-align: center;">
 
 
-               <big>
-                  <p> Tu as <?= $point; ?> points</p>
-               </big>
+         <h1 class="display-4 text-white mt-5 mb-2"></h1>
+         <h2>Exercice</h2>
+
+         <div class="container">
 
 
-            </div>
+            <strong>
+               <p> Tu as <?= $point; ?> points</p>
+            </strong>
 
-            <hr>
-            <p>
-               <font size="1pt">
-                  <form method="POST">
-                     <input type="hidden" value="1" name="proposition">
 
-                     <?php
-                     if (isset($message_reponse)) {
-                        echo $message_reponse . '<br><br>';
-                     }
-                     echo $formulaire_exercice;
-                     ?>
+         </div>
 
-            </p> <input type='submit' class="btn btn-primary btn-info" href="#" value='Validez ! '>
+         <hr>
+         <p>
 
-            <br>
-            <hr>
-            <div class="container">
-               <div class="row">
+            <form method="POST">
+               <input type="hidden" value="1" name="proposition">
 
-                  <div class="col-sm">
-                     <p><a class='btn btn-primary btn-info' href='http://projeteducatif.bsb/index.php/exercice/show/1/<?= $plusdur ?>/'>J'en veux plus !</a> </p>
-                  </div>
+               <?php
+               if (isset($message_reponse)) {
+                  echo $message_reponse . '<br><br>';
+               }
+               echo $formulaire_exercice;
+               ?>
 
-                  <div class="col-sm">
-                     <p><a class='btn btn-primary btn-info' href='http://projeteducatif.bsb/index.php/exercice/show/1/<?= $moindur ?>/'>c'est trop dur !</a> </p>
-                  </div>
+         </p> <input type='submit' class="btn btn-primary btn-info" href="#" value='Validez ! '>
 
-                  <div class="col-sm">
-                     <a class='btn btn-warning  btn-info' href='?deco=1'>Recommencer le jeux</a>
-                  </div>
+         <br>
+         <hr>
+         <div class="container">
+            <div class="row">
+
+               <div class="col-sm">
+                  <p><a class='btn btn-primary btn-info' href='http://projeteducatif.bsb/index.php/exercice/show/1/<?= $plusdur ?>/'>J'en veux plus !</a> </p>
+               </div>
+
+               <div class="col-sm">
+                  <p><a class='btn btn-primary btn-info' href='http://projeteducatif.bsb/index.php/exercice/show/1/<?= $moindur ?>/'>c'est trop dur !</a> </p>
+               </div>
+
+               <div class="col-sm">
+                  <a class='btn btn-warning  btn-info' href='?deco=1'>Recommencer le jeux</a>
                </div>
             </div>
+         </div>
+         </form>
 
-            </form>
-
-            </font>
-         </center>
 
          <?php include '/wamp64/www/ProjetEducatif/application/views/common/footer.php'; ?>
-
 
       </div>
 

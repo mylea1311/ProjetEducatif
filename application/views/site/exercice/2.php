@@ -25,13 +25,18 @@
 
                      ?>
                      <br>
+
+
                      <br>
                      <!-- Button trigger modal -->
-                     <button type="button" class="btn btn-primary btn-info" data-toggle="modal" data-target="#exampleModal">
-                        Valider
-                     </button>
+
 
                   </form>
+
+                  <button type="button" class="btn btn-primary btn-info" data-toggle="modal" data-target="#exampleModal">
+                     Valider
+                  </button>
+
                </center>
             <?php } ?>
          </div>
@@ -39,6 +44,7 @@
             <div class="row">
 
                <div class="col-sm">
+
                   <p><a href='?deco=1' class="btn btn-warning btn-info">Recommencer le jeux</a> </p>
                </div>
 

@@ -9,7 +9,9 @@ class Auth extends CI_Controller
       parent::__construct();
       $this->load->helper('url');
       $this->load->library('session');
+      $this->load->library('email');
    }
+
    public function login()
    {
 
@@ -68,6 +70,7 @@ class Auth extends CI_Controller
 
             //add user in database
 
+
             $data = array(
                'username' => $_POST['username'],
                'email ' => $_POST['email'],
@@ -80,6 +83,35 @@ class Auth extends CI_Controller
             $this->db->insert('users', $data);
 
             $this->session->set_flashdata("success", "ton compte a etait enregistré tu peux login now");
+
+
+            $this->email->from('inscriptionMonsite@kikoo.com', 'Kikoo');
+            $this->email->to($_POST['email']);
+
+            $this->email->subject('Inscription Kikoo');
+            $this->email->message('Bienvenue sur Kikoo votre inscription est prise en compte.');
+
+            $this->email->send();
+
+
+
+            // $config = array();
+            // $config['protocol'] = 'smtp';
+            // $config['smtp_host'] = 'localhost';
+            // $config['smtp_user'] = 'inscriptionMonsite@kikoo.com';
+            // $config['smtp_pass'] = '';
+            // $config['smtp_port'] = 25;
+            // $this->email->initialize($config);
+            // $this->email->set_newline("\r\n");
+
+            if ($this->email->send(FALSE)) {
+               echo "if " . $_POST['email'];
+               exit;
+            } else {
+               echo "else " . $_POST['email'];
+               exit;
+            }
+
             redirect("auth/register", "refresh");
          }
       }

@@ -22,8 +22,8 @@
 
    <!-- NavBar -->
 
-   <nav class="navbar navbar-light" style="background-image: radial-gradient(circle, #92b9eb, #a5b9f6, #bdb8fd, #d9b5ff, #f5b1fb);">
-      <img src="/assets/img/logo_kikoo.png" width="70" height="70" alt="">
+   <nav class="navbar navbar-light" style="background-color:beige rgba(223, 198,140,0.83);">
+      <img src="/assets/img/kikoologo.png" width="70" height="70" alt="">
       <a class="navbar-brand" href="http://projeteducatif.bsb/index.php/site/index/" style="color:black">Accueil</a>
       <a class="navbar-brand" href="http://projeteducatif.bsb/index.php/site/exercice/" style="color:black">exercice</a>
       <a class="navbar-brand" href="http://projeteducatif.bsb/index.php/site/cour/" style="color:black">Cours</a>

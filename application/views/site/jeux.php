@@ -1,139 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
+<div class="container">
 
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-   <link rel="stylesheet" href="/assets/css/main.css">
-   <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
-   <title>Title</title>
-</head>
+   <table class="table table-striped">
 
-<body>
+      <thead>
+         <tr>
+            <!-- <th scope="col" style="text-align: center; font-size:30px;">#</th> -->
+            <th scope="col" style="text-align: center; font-size:30px;">Titre</th>
+            <!-- <th scope="col" style="text-align: center; font-size:30px;">Categorie</th>
+            <th scope="col" style="text-align: center; font-size:30px;">Utilisation</th> -->
+            <th scope="col" style="text-align: center; font-size:30px;">Description</th>
+         </tr>
+      </thead>
 
-   <!-- Canvas = Zone de dessin -->
-   <center>
-      <h1>Draw </h1>
-   </center>
-   <input type="button" value="saveme" id="save" />
-   <center><canvas id='pad' width='900' height="600"></canvas></center>
-   <br>
-   <img id="img" /> <button id="reset">Reset</button>
-   <button id="red">Rouge</button>
-   <button id="blue">Bleu</button>
-   <button id="noir">Noir</button>
-   <button id="jaune">Jaune</button>
-   <button id="vert">Vert</button>
-   <button id="rose">Rose</button>
-   <button id="gomme">Gomme</button>
+      <tbody>
+         <?php
+         //Si la variable exercices n'est pas vide on parcours la table exercice
+         foreach ($jeux as $jeu) :
+         ?><tr>
 
-   <br>
-   <br>
-   <br>
+               <!-- <th scope="row" style="font-size: 25px;">
+                  <center>//$jeux['idJeux'] ?></center>
+               </th> -->
+               <td style="font-size: 25px; text-align:center;">
+                  <?= $jeu['Titre'] ?>
+               <td style="font-size: 25px;">
+                  <!-- <center><?php //$jeux['description']; 
+                                 ?> ?>
+               </td>
+               </center> -->
+                  <!-- <td style="font-size: 25px;">
+                  <center>// $exercice['compteurUtilisation'] ?>
+               </td>
+               </center> -->
+                  <div class="container" style="text-align:center;">
 
-   <a href="vignettes">consulter les images</a>
-   <script>
-      var saveme, img;
+                     <button class="btn-lg btn-secondary" style="border: 1px solid ;">
+                        <a style="color:black " href=" <?php echo  'http://projeteducatif.bsb/index.php/jeux/show/' . $jeu['idJeux'] . '/5/'; ?>">GO</a>
+                     </button>
 
-      canvas = $('#pad')[0]
-      context = canvas.getContext("2d")
-      pendown = false
+                  </div>
+               <?php endforeach;
+               ?>
+      </tbody>
+   </table>
 
-
-      saveme = document.getElementById("save");
-      img = document.getElementById("img");
-      saveme.onclick = function(event) { // method for save pico
-         var tmp = canvas.toDataURL();
-         img.src = tmp;
-         img.style.display = 'inline';
-
-      }
-      //Gomme
-      $('#gomme').click(function() {
-         context.beginPath();
-         context.strokeStyle = 'white';
-         context.lineWidth = '15';
-      });
-
-      //Couleur Rose
-      $('#rose').click(function() {
-         context.beginPath();
-         context.strokeStyle = 'pink';
-         context.lineWidth = '3';
-      });
-
-      //Couleur Vert
-      $('#vert').click(function() {
-         context.beginPath();
-         context.strokeStyle = 'green';
-         context.lineWidth = '3';
-      });
-
-      //Couleur Jaune
-      $('#jaune').click(function() {
-         context.beginPath();
-         context.strokeStyle = 'yellow';
-         context.lineWidth = '3';
-      });
-
-      //Couleur Rouge
-      $('#red').click(function() {
-         context.beginPath();
-         context.strokeStyle = 'red';
-         context.lineWidth = '3';
-      });
-
-      //Couleur Bleu
-      $('#blue').click(function() {
-         context.beginPath();
-         context.strokeStyle = 'blue';
-         context.lineWidth = '3';
-      });
-
-      //Couleur Noir
-      $('#noir').click(function() {
-         context.beginPath();
-         context.strokeStyle = 'black';
-         context.lineWidth = '3';
-      });
-
-      // Function Zone Dessin MouseMove
-      $('#pad').mousemove(function(event) {
-         let xpos = event.pageX - canvas.offsetLeft;
-         let ypos = event.pageY - canvas.offsetTop;
-         if (pendown) context.lineTo(xpos, ypos)
-         else context.moveTo(xpos, ypos)
-         context.stroke();
-         context.strokeStyle = '';
-         context.lineWidth = '';
-      });
-
-      $('#pad').mousedown(function() {
-         pendown = true
-      })
-      $('#pad').mouseup(function() {
-         pendown = false
-      })
-
-      $('#reset').click(function() {
-         const context = canvas.getContext('2d');
-         context.clearRect(0, 0, canvas.width, canvas.height);
-         let w = canvas.width;
-         canvas.width = 1;
-         canvas.width = w;
-      });
-   </script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
-
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   <?php
 
 
-
-</body>
-
-</html>
+   /* echo  isset($formulaire_exercice);
+   var_dump($formulaire_exercice);
+   */ ?>
+</div>

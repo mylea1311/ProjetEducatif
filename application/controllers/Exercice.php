@@ -55,13 +55,11 @@ class Exercice extends CI_Controller
    public function show($id, $difficulter)
    {
 
-
       $data['exercice'] = $this->exercice_model->getexo($id);
-
 
       $formulaire_exercice = '';
       $message_reponse = '';
-      //$lettres_mot = '';
+      $lettres_mot = '';
 
       include('Exercices/' . $id . '.php');
 
@@ -81,16 +79,14 @@ class Exercice extends CI_Controller
       if (isset($_SESSION['point']))
          $data['point'] = $_SESSION['point'];
 
-      //$data['lettres_mot'] = $lettres_mot;
+      $data['lettres_mot'] = $lettres_mot;
 
-      //  if (isset($lettres_mot))
-      // $data['lettres_mot'] = $lettres_mot;
-      // if (isset($tableau))
-      //    $data['tableau'] = $tableau;
+      if (isset($lettres_mot))
+         $data['lettres_mot'] = $lettres_mot;
+      if (isset($tableau))
+         $data['tableau'] = $tableau;
 
-      // echo $data['lettres_mot'];
-      // exit;
-      var_dump($_SESSION['point']);
+      //      var_dump($_SESSION['point']);
 
       $this->load->view('common/header');
       $this->load->view('site/exercice/' . $id, $data);

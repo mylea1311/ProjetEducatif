@@ -37,16 +37,6 @@ class Site extends CI_Controller
       $this->load->view('common/footer', $data);
    }
 
-   public function jeux()
-   {
-      // On recupère le titre dans data 
-      $data["title"] = "jeux";
-      //On charge les vues avec les données
-      $this->load->view('common/header', $data);
-      $this->load->view('site/jeux', $data);
-      $this->load->view('common/footer', $data);
-      var_dump($data);
-   }
 
    public function membres()
    {

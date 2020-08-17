@@ -20,8 +20,8 @@
                <!-- <th scope="row" style="font-size: 25px;">
                   <center>// $exercice['idExercice'] ?></center>
                </th> -->
-               <td style="font-size: 25px;">
-                  <center><?= $exercice['titre'] ?></center>
+               <td style="font-size: 25px; text-align:center;">
+                  <?= $exercice['titre'] ?>
                <td style="font-size: 25px;">
                   <!-- <center>//$exercice['categorie'] ?>
                </td>
@@ -30,19 +30,15 @@
                   <center>// $exercice['compteurUtilisation'] ?>
                </td>
                </center> -->
+                  <div class="container" style="text-align:center;">
 
-                  <center><button class="btn-lg btn-secondary" style="border: 1px solid ;"><a style="color:black " href=" <?php echo  'http://projeteducatif.bsb/index.php/exercice/show/' . $exercice['idExercice'] . '/5/';
-                                                                                                                           //  var_dump($exercicemath); 
-                                                                                                                           ?>">GO</a></button></center>
+                     <button class="btn-lg btn-secondary" style="border: 1px solid ;">
+                        <a style="color:black " href=" <?php echo  'http://projeteducatif.bsb/index.php/exercice/show/' . $exercice['idExercice'] . '/5/'; ?>">GO</a>
+                     </button>
 
-
-
+                  </div>
                <?php endforeach;
                ?>
-
-
-
-
       </tbody>
    </table>
 

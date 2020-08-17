@@ -1,6 +1,6 @@
-<center>
+<div class="container" style="text-align: center;">
    <h1><?php echo $title; ?></h1>
-</center>
+</div>
 
 <div class="container">
 
@@ -23,8 +23,8 @@
                <!-- <th scope="row" style="font-size: 25px; text-align:center;"> //$cour['idCour'] ?></th> -->
                <td style="font-size: 25px; text-align:center;"><?= $cour['titre'] ?>
                <td style="font-size: 25px; text-align:center;"><?= $cour['categorie'] ?></td>
-               <td>
-                  <center><button type="button" class="btn-lg btn-secondary " style="border: 1px solid ;"><a style="color:black " href='<?= $cour['pdf'] ?> '>ICI</a></button></center>
+               <td style="text-align:center;">
+                  <button type="button" class="btn-lg btn-secondary " style="border: 1px solid ;"><a style="color:black;" target="_blank" href='<?= $cour['pdf'] ?> '>ICI</a></button>
                </td>
 
 

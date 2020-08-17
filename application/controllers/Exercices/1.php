@@ -47,15 +47,15 @@ if (isset($_POST['proposition']) == 1) {
 
 if (isset($message_succes) == 1) {
 
-   $message_reponse .= "<span class='alert-success' style='border: 2px solid ; border-radius:7px; padding-left:5px;padding-right:5px'> Bonne réponse !  </span> <br>   <br>";
+   $message_reponse = "<span class='alert-success' style='border: 2px solid ; border-radius:7px; padding-left:5px;padding-right:5px'> Bonne réponse !  </span> <br>   <br>";
    $message_lvl = "";
 } elseif (isset($message_erreur) == 1) {
 
-   $message_reponse .= "<span class='alert-danger' style='border: 2px solid crimson; border-radius:7px; padding-left:5px;padding-right:5px'> La bonne réponse est : " . $calcule . ' </span> <br>   <br>';
+   $message_reponse = "<span class='alert-danger' style='border: 2px solid crimson; border-radius:7px; padding-left:5px;padding-right:5px'> La bonne réponse est : " . $calcule . ' </span> <br>   <br>';
    $message_lvl = "";
 } else {
 
-   $mesage_h1 = "";
+   $message_h1 = "";
    $message_lvl = "";
 }
 
@@ -123,4 +123,4 @@ height: 60px;border-radius: 10px;  text-align: center;'><br> <br>";
 /////////////////////////
 
 
-var_dump($_SESSION);
+var_dump($formulaire_exercice);
