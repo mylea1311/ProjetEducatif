@@ -12,6 +12,9 @@
    </style>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+   <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+   <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
    <link rel="stylesheet" href="/assets/css/main.css">
 
    <title>KIKOO</title>
@@ -22,12 +25,12 @@
 
    <!-- NavBar -->
 
-   <nav class="navbar navbar-light" style="background-color:beige rgba(223, 198,140,0.83);">
+   <nav class="navbar navbar-light">
       <img src="/assets/img/kikoologo.png" width="70" height="70" alt="">
       <a class="navbar-brand" href="http://projeteducatif.bsb/index.php/site/index/" style="color:black">Accueil</a>
       <a class="navbar-brand" href="http://projeteducatif.bsb/index.php/site/exercice/" style="color:black">exercice</a>
       <a class="navbar-brand" href="http://projeteducatif.bsb/index.php/site/cour/" style="color:black">Cours</a>
-      <a class="navbar-brand" href="http://projeteducatif.bsb/index.php/site/jeux/" style="color:black">Jeux</a>
+      <a class="navbar-brand" href="http://projeteducatif.bsb/index.php/jeux/index/" style="color:black">Jeux</a>
       <a class="navbar-brand" href="http://projeteducatif.bsb/index.php/auth/register/" style="color:black">Inscription</a>
       <a class="navbar-brand" href="http://projeteducatif.bsb/index.php/auth/login/" style="color:black">LOG in</a>
       <a class="navbar-brand" href="http://projeteducatif.bsb/index.php/user/profile/" style="color:black">Profile</a>
@@ -38,13 +41,13 @@
 
 
 
-   <body>
 
 
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-   </body>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
 
 </html>

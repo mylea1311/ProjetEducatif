@@ -9,7 +9,7 @@ class Auth extends CI_Controller
       parent::__construct();
       $this->load->helper('url');
       $this->load->library('session');
-      $this->load->library('email');
+      // $this->load->library('email');
    }
 
    public function login()
@@ -85,32 +85,28 @@ class Auth extends CI_Controller
             $this->session->set_flashdata("success", "ton compte a etait enregistré tu peux login now");
 
 
-            $this->email->from('inscriptionMonsite@kikoo.com', 'Kikoo');
-            $this->email->to($_POST['email']);
-
-            $this->email->subject('Inscription Kikoo');
-            $this->email->message('Bienvenue sur Kikoo votre inscription est prise en compte.');
-
-            $this->email->send();
+            //  $email = Services::email();
 
 
+            // $email = $_POST['email'];
 
-            // $config = array();
-            // $config['protocol'] = 'smtp';
-            // $config['smtp_host'] = 'localhost';
-            // $config['smtp_user'] = 'inscriptionMonsite@kikoo.com';
-            // $config['smtp_pass'] = '';
-            // $config['smtp_port'] = 25;
-            // $this->email->initialize($config);
-            // $this->email->set_newline("\r\n");
+            // $email->setFrom('kikoo@kikoo.com', 'Your Name');
+            // $email->setTo('someone@example.com');
+            // $email->setCC('another@another-example.com');
+            // $email->setBCC('them@their-example.com');
 
-            if ($this->email->send(FALSE)) {
-               echo "if " . $_POST['email'];
-               exit;
-            } else {
-               echo "else " . $_POST['email'];
-               exit;
-            }
+            // $email->setSubject('Email Test');
+            // $email->setMessage('Testing the email class.');
+
+            // $email->send();
+
+            // $config['protocol'] = 'sendmail';
+            // $config['mailPath'] = '/usr/sbin/sendmail';
+            // $config['charset']  = 'iso-8859-1';
+            // $config['wordWrap'] = true;
+
+            // $email->initialize($config);
+
 
             redirect("auth/register", "refresh");
          }

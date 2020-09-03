@@ -17,11 +17,9 @@ class Cours extends CI_Controller
       $data['titre'] = $this->db->get('titre');
       // On applique la methode GET afin de recupérer son ID
       $data['id'] = $_GET['id'];
-
       // Si l'id est different de nul dans le tableau data 
       // alors on récupère UN exerice en fonction de son Id
-      // on utilise getexo pour nous renvoyé l'exercice.
-
+      // on utilise getexo pour nous renvoyé le cours.
       if ($data['id'] != '') {
          $data['cour'] = $this->cours_model->getcours($data['id']);
          $data['cours_html'] = $this->cours_model->cour();
@@ -30,8 +28,6 @@ class Cours extends CI_Controller
          $data['cours'] = $this->cours_model->getcours();
          $data['cour']['titre'] = 'tous les cours';
       }
-      // vérification des données envoyé dans la vue.
-      var_dump($data);
 
       $this->load->view('common/header', $data);
       $this->load->view('site/cours', $data);

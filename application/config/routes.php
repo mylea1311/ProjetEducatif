@@ -59,8 +59,9 @@ $route['auth/register'] = 'auth/register/';
 $route['auth/login'] = 'auth/login';
 
 //ROUTES JEUX
-
-//$route['jeux/show/(:id)'] = 'jeux/show/$1';
+//$route['site/jeux'] = 'site/jeux';
+$route['jeux/index'] = 'jeux/index';
+$route['jeux/show/(:id)'] = 'jeux/show/$1';
 
 //ROUTE APROPOS
 $route['site/apropos'] = 'site/apropos';

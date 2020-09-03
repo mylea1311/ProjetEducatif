@@ -20,17 +20,16 @@
          //Si la variable exercices n'est pas vide on parcours la table exercice
          foreach ($cours as $cour) :
          ?><tr>
-               <!-- <th scope="row" style="font-size: 25px; text-align:center;"> //$cour['idCour'] ?></th> -->
                <td style="font-size: 25px; text-align:center;"><?= $cour['titre'] ?>
                <td style="font-size: 25px; text-align:center;"><?= $cour['categorie'] ?></td>
                <td style="text-align:center;">
                   <button type="button" class="btn-lg btn-secondary " style="border: 1px solid ;"><a style="color:black;" target="_blank" href='<?= $cour['pdf'] ?> '>ICI</a></button>
                </td>
 
-
             <?php
          endforeach;
             ?>
+
       </tbody>
    </table>
 

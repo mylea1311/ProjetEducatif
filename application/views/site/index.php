@@ -40,18 +40,18 @@
 
          <div class="col-md-6 mb-5">
             <div class="card h-100">
-               <a href="/index.php/jeux/index"> <img class="card-img-top" src="/assets/img/coloriage.jpg" width="400" height="350" alt=""> </a>
+               <a href="/index.php/jeux/index/"> <img class="card-img-top" src="/assets/img/coloriage.jpg" width="400" height="350" alt=""> </a>
                <div class="card-body">
-                  <h4 class="card-title"><a href="/index.php/jeux/index">Récréation </a></h4>
+                  <h4 class="card-title"><a href="/index.php/jeux/index/">Récréation </a></h4>
                   <p class="card-text">Viens t'amuser avec nous !</p>
                </div>
                <div class="card-footer">
-                  <a href="/index.php/jeux/index" class="btn btn-primary">C'est partie !</a>
+                  <a href="/index.php/jeux/index/" class="btn btn-primary">C'est partie !</a>
                </div>
             </div>
          </div>
 
-         <div class="col-md-12 mb-5">
+         <div class="col-md-6 mb-5">
             <div class="card h-100">
                <a href="/index.php/site/cour"> <img class="card-img-top" src="/assets/img/alphabet_1.jpg" width="400" height="350" alt=""> </a>
                <div class="card-body">

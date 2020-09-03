@@ -15,9 +15,8 @@ class Site extends CI_Controller
 
    public function index()
    {
+
       // On stock la variable title dans data afin d'afficher le titre d'une page
-
-
       $data["title"] = "Page d'accueil";
       $this->load->view('common/header', $data);
       $this->load->view('site/index', $data);
